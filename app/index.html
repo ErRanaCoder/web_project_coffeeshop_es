@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <title>Lil'Coffee</title>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <img
+        class="logo"
+        src="./img/logo_coffeeshop_dark.svg"
+        alt="Triple Espresso">
+        <nav class="nav">
+          <div class="nav-links">
+            <a class="nav-link" href="#reservation">Reservar una mesa</a>
+            <a class="nav-link" href="#footer">Contactos</a>
+          </div>
+        </nav>
+      <h1 class="header-title">
+        <span class="span-accent">Café de especialidad</span>
+        en Triple Peaks
+      </h1>
+
+      <p class="header-description">
+        ¡Te damos la bienvenida a nuestra zona de estudio! Aquí tenemos café
+        para darte energía y motivar tu creatividad.
+      </p>
+
+      <img
+        class="header-image"
+        src="./img/inside_coffee_shop.png"
+        alt="Interior de la cafetería Triple Espresso"
+      >
+
+      <div class="header-info">
+        <div class="header-hours">
+          <p class="info-text">Horario:</p>
+          <p class="info-text">
+            Lunes a Viernes (de 10:00h a 19:00h)
+          </p>
+          <p class="info-text">
+            Sábados y Domingos (de 11:00h a 18:00h)
+          </p>
+        </div>
+
+        <p class="info-text">
+          Avenida del Éxito 200, Ciudad Triple Peaks
+        </p>
+      </div>
+    </header>
+  </body>
+
+    <main class="content">
+      <section id="reservation" class="main-reserve">
+
+        <h2>Reservar una mesa</h2>
+
+        <form class="main-form">
+
+          <div class="main-name">
+            <label for="nombre">Nombre *</label>
+            <input
+              id="nombre"
+              type="text"
+              name="nombre"
+              placeholder="Nombre"
+              required
+            >
+          </div>
+
+          <div class="main-guest">
+            <label for="comensales">Comensales *</label>
+            <input
+              id="comensales"
+              type="number"
+              name="comensales"
+              placeholder="1-8"
+              min="1"
+              max="8"
+              required
+            >
+          </div>
+
+          <div class="main-date">
+            <label for="fecha">Fecha *</label>
+            <input
+              id="fecha"
+              type="datetime-local"
+              name="fecha"
+              required
+            >
+          </div>
+
+          <div class="main-email">
+            <label for="email">Correo *</label>
+            <input
+              id="email"
+              type="email"
+              name="correo"
+              placeholder="email@email.com"
+              required
+            >
+          </div>
+
+          <div class="main-reserve-button">
+            <button type="submit">Reservar una mesa</button>
+          </div>
+
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                name="terminos"
+                required
+              >
+              Acepto los
+              <a href="" class="main-terms">términos de uso</a>
+            </label>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+
+    <footer class="footer" id="footer">
+      <div>
+        <img
+          src="./img/logo_coffeeshop_dark.svg"
+          alt="Triple Espresso"
+        >
+        <p>2026 Erick Gabriel Hernandez Rebolledo</p>
+      </div>
+
+      <div>
+
+      </div>
+    </footer>
+
+
+
+</html>
