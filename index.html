@@ -12,27 +12,29 @@
       rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico">
 
     <title>Lil'Coffee</title>
   </head>
 
   <body>
-
     <header class="header">
       <img
         class="logo"
         src="./img/logo_coffeeshop_dark.svg"
-        alt="Triple Espresso">
-        <nav class="nav">
-          <div class="nav-links">
-            <a class="nav-link" href="#reservation">Reservar una mesa</a>
-            <a class="nav-link" href="#footer">Contactos</a>
+        alt="Triple Espresso"
+      >
+
+      <nav class="nav">
+        <div class="nav-links">
+          <a class="nav-link" href="#reservation">Reservar una mesa</a>
+          <a class="nav-link" href="#footer">Contactos</a>
           </div>
-        </nav>
+      </nav>
+
       <h1 class="header-title">
         <span class="span-accent">Café de especialidad</span>
         en Triple Peaks
@@ -52,9 +54,11 @@
       <div class="header-info">
         <div class="header-hours">
           <p class="info-text">Horario:</p>
+
           <p class="info-text">
             Lunes a Viernes (de 10:00h a 19:00h)
           </p>
+
           <p class="info-text">
             Sábados y Domingos (de 11:00h a 18:00h)
           </p>
@@ -65,95 +69,126 @@
         </p>
       </div>
     </header>
-  </body>
 
     <main class="content">
-      <section id="reservation" class="main-reserve">
+      <section class="reservation" id="reservation">
+        <h2 class="reservation__title">
+          Reservar una mesa
+        </h2>
 
-        <h2>Reservar una mesa</h2>
+        <form class="form reservation__form">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="nombre">
+              Nombre *
+            </label>
 
-        <form class="main-form">
-
-          <div class="main-name">
-            <label for="nombre">Nombre *</label>
             <input
+              class="form__input"
               id="nombre"
               type="text"
               name="nombre"
               placeholder="Nombre"
               required
             >
-          </div>
 
-          <div class="main-guest">
-            <label for="comensales">Comensales *</label>
+            <label class="form__label" for="comensales">
+              Número de comensales *
+            </label>
+
             <input
+              class="form__input"
               id="comensales"
               type="number"
               name="comensales"
-              placeholder="1-8"
               min="1"
               max="8"
+              placeholder="1-8"
               required
             >
-          </div>
 
-          <div class="main-date">
-            <label for="fecha">Fecha *</label>
+            <label class="form__label" for="fecha">
+              Fecha y hora *
+            </label>
+
             <input
+              class="form__input"
               id="fecha"
               type="datetime-local"
               name="fecha"
               required
             >
-          </div>
 
-          <div class="main-email">
-            <label for="email">Correo *</label>
+            <label class="form__label" for="email">
+              Tu correo electrónico *
+            </label>
+
             <input
+              class="form__input"
               id="email"
               type="email"
               name="correo"
               placeholder="email@email.com"
               required
             >
-          </div>
 
-          <div class="main-reserve-button">
-            <button type="submit">Reservar una mesa</button>
-          </div>
+            <button class="form__button" type="submit">
+              Reservar una mesa
+            </button>
 
-          <div>
-            <label>
+            <label class="form__label form__label_type_checkbox">
               <input
+                class="form__checkbox"
                 type="checkbox"
                 name="terminos"
                 required
               >
-              Acepto los
-              <a href="" class="main-terms">términos de uso</a>
+              Acepto los términos de uso
             </label>
-          </div>
-
+          </fieldset>
         </form>
       </section>
     </main>
 
+   <footer class="footer" id="footer">
+  <div class="footer__content">
+    <img
+      class="footer__logo"
+      src="./img/logo_coffeeshop_light.svg"
+      alt="Triple Espresso"
+    >
 
-    <footer class="footer" id="footer">
-      <div>
-        <img
-          src="./img/logo_coffeeshop_dark.svg"
-          alt="Triple Espresso"
-        >
-        <p>2026 Erick Gabriel Hernandez Rebolledo</p>
-      </div>
+    <div class="footer__social">
+      <h3 class="footer__social-heading">Redes sociales</h3>
 
-      <div>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a class="footer__social-link" href="#">
+            <img
+              class="footer__social-icon"
+              src="./img/facebook_white.svg"
+              alt="Facebook"
+            >
+            Facebook
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__social-link" href="#">
+            <img
+              class="footer__social-icon"
+              src="./img/instagram_white.svg"
+              alt="Instagram"
+            >
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-      </div>
-    </footer>
-
-
-
+  <p class="footer__copyright">
+    © 2026 Erick Gabriel Hernández Rebolledo
+  </p>
+  <div class="footer__circle"></div>
+  </footer>
+  </body>
 </html>
